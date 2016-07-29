@@ -1,5 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe Trip, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Trip do
+  it { should validate_presence_of(:pickup) }
+  it { should validate_presence_of(:car) }
+  it { should validate_presence_of(:payment_method) }
+  it { should belong_to :driver }
+  it { should belong_to :city }
 end
